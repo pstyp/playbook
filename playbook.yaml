@@ -1,0 +1,14 @@
+- name: Install docker
+  hosts: all 
+  connection: local
+  become: true
+  roles:
+          - installation
+  
+  
+- name: Intiate swarm
+  hosts: all
+  connection: local
+  become: true
+  roles:
+          - swarm
